@@ -2,6 +2,6 @@
   "dbname": "lab_work4",
   "user" : "postgres",
   "password" : "ab-320",
-  "database_ip" : "localhost",
+  "database_ip" : "db",
   "database_port" : 5432
 }
