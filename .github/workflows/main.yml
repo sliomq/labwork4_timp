@@ -7,7 +7,7 @@ on:
 jobs:
   build_test:
     runs-on: ubuntu-latest
-    
+
     steps:
     # Шаг 1: Получаем код
     - name: Checkout
@@ -17,7 +17,11 @@ jobs:
     - name: Setup Docker
       run: |
         sudo apt-get update
-        sudo apt-get install -y docker.io
+        sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+        sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+        sudo apt-get update
+        sudo apt-get install -y docker-ce
         sudo systemctl start docker
         docker --version
 
@@ -25,6 +29,7 @@ jobs:
       run: |
         sudo curl -L "https://github.com/docker/compose/releases/download/v2.23.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
         sudo chmod +x /usr/local/bin/docker-compose
+        sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
         docker-compose --version
 
     # Шаг 3: Собираем контейнеры
