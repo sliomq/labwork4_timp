@@ -9,7 +9,7 @@
 #include "crow/include/crow/middlewares/cors.h"
 #include <mutex>
 #include <openssl/sha.h>
-#include <jwt-cpp/jwt.h>
+#include "jwt-cpp/include/jwt-cpp/jwt.h" 
 #include <chrono>
 #include <string>
 
