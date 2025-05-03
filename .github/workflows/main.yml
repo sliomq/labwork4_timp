@@ -32,6 +32,12 @@ jobs:
         sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
         docker-compose --version
 
+    - name: Verify paths
+      run: |
+        echo "=== Проверка структуры ==="
+        docker-compose run backend ls -la /app/jwt-cpp/include/
+        docker-compose run backend ls -la /usr/include/jwt-cpp
+
     # Шаг 3: Собираем контейнеры
     - name: Build containers
       run: docker-compose build
