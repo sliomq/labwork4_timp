@@ -1,0 +1,57 @@
+name: Docker Compose CI/CD
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build_test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # Шаг 1: Получаем код
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    # Шаг 2: Устанавливаем Docker и Docker Compose
+    - name: Setup Docker
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y docker.io
+        sudo systemctl start docker
+        docker --version
+
+    - name: Install Docker Compose
+      run: |
+        sudo curl -L "https://github.com/docker/compose/releases/download/v2.23.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        sudo chmod +x /usr/local/bin/docker-compose
+        docker-compose --version
+
+    # Шаг 3: Собираем контейнеры
+    - name: Build containers
+      run: docker-compose build
+
+    # Шаг 4: Запускаем сервисы
+    - name: Start services
+      run: docker-compose up -d
+
+    # Шаг 5: Ждем инициализации
+    - name: Wait for initialization
+      run: |
+        sleep 20
+        docker-compose ps
+
+    # Шаг 6: Тестируем backend
+    - name: Test backend API
+      run: |
+        STATUS_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:5000/sensors)
+        if [ "$STATUS_CODE" -ne 200 ]; then
+          echo "Backend test failed! Status code: $STATUS_CODE"
+          docker-compose logs backend
+          exit 1
+        fi
+
+    # Шаг 7: Останавливаем сервисы
+    - name: Stop services
+      if: always()
+      run: docker-compose down
