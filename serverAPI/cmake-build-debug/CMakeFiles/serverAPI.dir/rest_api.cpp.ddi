@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles/serverAPI.dir/rest_api.cpp.o",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

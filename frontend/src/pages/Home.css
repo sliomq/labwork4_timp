@@ -1,0 +1,165 @@
+/* Home.css */
+.home {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.home h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.home h2 {
+  color: #007bff;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.home h4 {
+  color: #666;
+  font-style: italic;
+}
+
+.home ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.home ul li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home ul li a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.home ul li a:hover {
+  text-decoration: underline;
+}
+
+.home ul li button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.home ul li button:hover {
+  background-color: #c82333;
+}
+
+.add-product-link {
+  position: fixed;
+  top: 20px;
+  right: 120px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+.add-product-link:hover {
+  background-color: #218838;
+}
+
+.exit-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  z-index: 1000;
+  border: none;
+  cursor: pointer;
+}
+
+.exit-button:hover {
+  background-color: #c82333;
+}
+
+/* Стили для фильтров */
+.filters {
+  margin-bottom: 20px;
+}
+
+.filters h2 {
+  margin-bottom: 10px;
+}
+
+.filters-inputs {
+  display: flex;
+  gap: 10px; /* Расстояние между input элементами */
+}
+
+.filters-inputs input[type="text"],
+.filters-inputs input[type="number"] {
+  flex: 1; /* Разрешает input элементам растягиваться */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.filters-inputs input[type="text"]:focus,
+.filters-inputs input[type="number"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.filters-inputs input[type="text"]::placeholder,
+.filters-inputs input[type="number"]::placeholder {
+  color: #999;
+}
+
+/* Стили для пагинации */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 5px;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination span {
+  margin: 0 10px;
+  font-size: 14px;
+  color: #666;
+}

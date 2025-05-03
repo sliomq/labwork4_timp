@@ -1,0 +1,14 @@
+# ninja log v6
+873	11328	1746256075091701959	CMakeFiles/serverAPI.dir/rest_api.cpp.o	719815424dabddc0
+865	873	1746256075083701959	CMakeFiles/serverAPI.dir/main.cpp.o.modmap	fa79a643d0914169
+1131	7563	1746255255287123270	CMakeFiles/serverAPI.dir/main.cpp.o	3c2117f26b7547b9
+865	873	1746256075083701959	CMakeFiles/serverAPI.dir/CXX.dd	fa79a643d0914169
+5	865	1746256074223701953	CMakeFiles/serverAPI.dir/rest_api.cpp.o.ddi	218cd29df7b7a5dc
+11331	11746	1746256085551702033	serverAPI	c0ea95203bfa188
+4	1125	1746255254162561263	CMakeFiles/serverAPI.dir/main.cpp.o.ddi	c478ee7850503697
+3	93	1746273323056112898	build.ninja	84abf3c90dd1ac26
+865	873	1746256075083701959	CMakeFiles/serverAPI.dir/rest_api.cpp.o.modmap	fa79a643d0914169
+865	873	1746256075083701959	/home/sliomq/Desktop/labwork4_timp/serverAPI/cmake-build-debug/CMakeFiles/serverAPI.dir/CXXModules.json	fa79a643d0914169
+35	5916	1746273324915182911	CMakeFiles/serverAPI.dir/main.cpp.o	c47721fb6c1c85cd
+35	10351	1746273324915182911	CMakeFiles/serverAPI.dir/rest_api.cpp.o	e0bb668526690b82
+10351	10684	1746273335230022985	serverAPI	5899c1090889144e

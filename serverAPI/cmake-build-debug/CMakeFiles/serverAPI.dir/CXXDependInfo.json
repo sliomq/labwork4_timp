@@ -1,0 +1,22 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "/home/sliomq/Desktop/labwork4_timp/serverAPI/cmake-build-debug",
+	"dir-cur-src" : "/home/sliomq/Desktop/labwork4_timp/serverAPI",
+	"dir-top-bld" : "/home/sliomq/Desktop/labwork4_timp/serverAPI/cmake-build-debug",
+	"dir-top-src" : "/home/sliomq/Desktop/labwork4_timp/serverAPI",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"/home/sliomq/Desktop/labwork4_timp/serverAPI/crow/include",
+		"/home/sliomq/Desktop/labwork4_timp/serverAPI/jwt-cpp/include"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/sliomq/Desktop/labwork4_timp/serverAPI/cmake-build-debug/CMakeFiles/serverAPI.dir"
+}

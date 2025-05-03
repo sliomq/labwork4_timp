@@ -1,0 +1,35 @@
+services:
+  db:
+    container_name: db
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_DB: lab_work4
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ab-320
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+
+  backend:
+    container_name: backend
+    build:
+      context: ./serverAPI
+    restart: always
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./serverAPI/configDB.json:/app/config/configDB.json
+    depends_on:
+      - db
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

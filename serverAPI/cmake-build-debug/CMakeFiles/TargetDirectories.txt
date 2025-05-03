@@ -1,0 +1,3 @@
+/home/sliomq/Desktop/labwork4_timp/serverAPI/cmake-build-debug/CMakeFiles/serverAPI.dir
+/home/sliomq/Desktop/labwork4_timp/serverAPI/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/sliomq/Desktop/labwork4_timp/serverAPI/cmake-build-debug/CMakeFiles/rebuild_cache.dir
